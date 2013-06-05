@@ -1,4 +1,7 @@
 #!/usr/bin/python
+# O(n^2) versus O(n) implementation
+
+__author__ = "vmanju"
 
 import time
 from random import randrange
@@ -23,7 +26,7 @@ def benchmark():
   for listSize in range(1000,10001,1000):
     alist = [randrange(10000) for x in range(listSize)]
     start = time.time()
-    print find_min1(alist)
+    print find_min2(alist)
     end = time.time()
     print "size: %d time: %f" % (listSize, end-start)
 
